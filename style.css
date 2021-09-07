@@ -5,13 +5,16 @@
 	box-sizing:border-box;
 	text-decoration:none;
 }
-
+html{
+  scroll-behavior:smooth;
+}
 
 .forfirstpage{
 	height:100vh;
 	width:100%;
 	background-image:url(testbg2.jpg);
 	background-size:100% 100%;
+	
 
 
 }
@@ -111,15 +114,15 @@ font-family:'ubuntu', sans-serif;
     position:absolute;
 	background:crimson;
 	bottom:50px;
-	left:65px;
+	left:0px;
 	padding:10px 40px;
 	border-radius:25px;
 	color:white;
 	font-size:15px;
 	font-weight:600;
-	z-index:1;
-	visibility:hidden;
-
+	z-index:2;
+	opacity:0;
+	transition:all 0.3s cubic-bezier(0.68,-0.55,0.265,1.5);
 }
 .navigation .fixed .text li .desk-nav::before{
 	position:absolute;
@@ -130,15 +133,17 @@ font-family:'ubuntu', sans-serif;
 	border-color:crimson;
 	border-width:5px;
 	width:20px;
-
+	z-index:2;
+	transition:all 0.3s cubic-bezier(0.68,-0.55,0.265,1.5);
 
 }
 .navigation .fixed .text li .mob-nav{
 	display:none;
 }
 .navigation .fixed .text li:hover .desk-nav{
-    visibility:visible;
-
+    opacity:1;
+	left:65px;
+	z-index:2;
 }
 .navigation .fixed .text li:hover{
 	background:#fff;
@@ -167,7 +172,7 @@ font-family:'ubuntu', sans-serif;
 ------------------------------------------------------------------*/
 
 .section-third{
-
+  
   padding-top:300px;
   padding-left:300px;
 	font-family:'ubuntu', sans-serif;
@@ -851,12 +856,12 @@ font-family:'ubuntu', sans-serif;
 /*====================================================================
                                      PORTFOLIO SECTION
 =====================================================================*/
-.seventh-page .seventh-section  .section-start .port-heading .title{
+.seventh-page .seventh-section  .section-start .port-heading .title , .eighth-page .contact .section-start .contact-heading .title{
 	display:flex;
 	justify-content:center;
 }
 
-.seventh-page .seventh-section  .section-start .port-heading .title .text{
+.seventh-page .seventh-section  .section-start .port-heading .title .text ,.eighth-page .contact .section-start .contact-heading .title .text{
     color:#111;
 	font-size:50px;
 	position:relative;
@@ -866,10 +871,10 @@ font-family:'ubuntu', sans-serif;
 	font-family:'Ubuntu',sans-serif;
 	margin-top:10px;
 	border-top:2px solid #111;
-	margin-bottom:60px;
+	margin-bottom:30px;
 	padding-bottom:20px;
 	border-bottom:2px solid #111;
-	width:200px;
+	max-width:200px;
 	border-radius:10px;
 	padding:5px;
 	
@@ -928,6 +933,7 @@ position:relative;
 opacity:0.6;
 
 }
+
 .seventh-page .seventh-section  .section-start .port-container .port-imgs .row-imgs{
 padding-left:200px;
 
@@ -960,14 +966,281 @@ transition:all 0.6s ease;
 }
 
 
+/*==================================================================
+                                EIGHT PAGE STYLING
+=========================================================================*/
+
+.eighth-page .contact .section-start .contact-heading .title .text:before{
+	content:"Get in Touch";
+	position:absolute;
+	bottom:-11px;
+	left:24%;
+	background:#fff;
+	border-radius:60px;
+	color:crimson;
+	font-size:15px;
+}
+
+.eighth-page .contact .section-start .contact-me .container .row .left-info{
+  
+}
+.eighth-page .contact .section-start .contact-me .container .row .right-info{
+
+}
+.eighth-page .contact .section-start .contact-me .container .row  .left-info .get-in-touch .get-in-head .get-text{
+	font-size:30px;
+	font-weight:600;
+	color:#111;
+	margin-bottom:20px;
+	font-family:'Poppins',sans-serif;
+	position:relative;
+}
+
+.eighth-page .contact .section-start .contact-me .container .row  .left-info .get-in-touch .get-in-head .get-text:after{
+    position:absolute;
+    content:"";
+	width:192px;
+	background:crimson;
+	height:2px;
+	border:1px solid crimson;
+	bottom:0;
+	left:0;
+	opacity:0.7;
+}
+
+.eighth-page .contact .section-start .contact-me .container .row  .left-info .get-in-touch .get-in-head .get-caption{
+	font-size:15px;
+	font-weight:500;
+	color:#111;
+	margin-bottom:10px;
+	font-family:'Gelasio',serif;
+}
+.eighth-page .contact .section-start .contact-me .container .row  .left-info .get-in-touch .get-in-head .contact-info .main-info {
+	display:flex;
+	
+}
+.eighth-page .contact .section-start .contact-me .container .row  .left-info .get-in-touch .get-in-head .contact-info .main-info i{
+	font-size:50px;
+	color:crimson;
+	margin:20px;
+}
+.eighth-page .contact .section-start .contact-me .container .row  .left-info .get-in-touch .get-in-head .contact-info .main-info .info{
+	margin-top:10px;
+}
+.eighth-page .contact .section-start .contact-me .container .row  .left-info .get-in-touch .get-in-head .contact-info .main-info .info .head{
+    font-size:20px;
+	font-weight:500;
+	font-family:'Poppins',sans-serif;
+}
+.eighth-page .contact .section-start .contact-me .container .row  .left-info .get-in-touch .get-in-head .contact-info .main-info .info .sub-title{
+    	font-size:15px;
+	font-weight:500;
+	color:#111;
+	margin-bottom:10px;
+	font-family:'Gelasio',serif;
+}
+
+.eighth-page .contact .section-start .contact-me{
+	padding-left:200px;
+	padding-right:30px;
+}
+
+.eighth-page .contact .section-start .contact-me .container .row  .right-info .text{
+	font-size:20px;
+	font-weight:600;
+	font-family:'Poppins',sans-serif;
+}
+
+.eighth-page .contact .section-start .contact-me .container .row  .right-info .fields .field{
+	height:45px;
+	width:100%;
+	margin-top:30px;
+}
+
+.eighth-page .contact .section-start .contact-me .container .row  .right-info .fields .field input, .eighth-page .contact .section-start .contact-me .container .row  .right-info .fields .textarea textarea{
+   height:100%;
+   width:100%;
+   border:1px solid lightgrey;
+   border-radius:6px;
+   outline:none;
+   padding:0 15px;
+   font-size:14px;
+   font-family:'Poppins',sans-serif;
+   font-weight:600;
+   
+}
+
+.eighth-page .contact .section-start .contact-me .container .row  .right-info .fields .textarea{
+	height:80px;
+
+}
+.eighth-page .contact .section-start .contact-me .container .row  .right-info .fields .textarea textarea{
+	padding-top:10px;
+	resize:none;
+}
+
+.eighth-page .contact .section-start .contact-me .container .row  .right-info .fields .button{
+	 height:47px;
+	 width:170px;
+	 margin-top:30px;
+}
+
+.eighth-page .contact .section-start .contact-me .container .row  .right-info .fields .button button{
+	width:100%;
+	height:100%;
+	border:2px solid crimson;
+	background:crimson;
+	font-size:20px;
+	font-weight:500;
+	font-family:'Poppins',sans-serif;
+	border-radius:6px;
+	transition:all 0.3s ease;
+	cursor:pointer;
+}
+
+.eighth-page .contact .section-start .contact-me .container .row  .right-info .fields .button button:hover{
+	color:crimson;
+	background:none;
+}
+
+/*========================================================================================
+                                   FOOTER SECTION
+============================================================================================*/
+.footer{
+	background:#111;
+}
+.footer .section-footer{
+	margin-top:20px;
+	padding-bottom:30px;
+}
+.footer .section-footer .section-start .container .row .image{
+	display:flex;
+	justify-content:center;
+}
+.footer .section-footer .section-start .container .row .image img{
+	  width:300px;
+	  height:150px;
+	  object-fit:100%  100%;
+}
+.footer .section-footer .section-start .container .row .foot-text {
+	display:flex;
+	justify-content:center;
+	
+}
+.footer .section-footer .section-start .container .row .foot-text .text{
+     font-size:15px;
+	 color:#fff;
+	 font-family:'Gelasio',serif;
+	 
+}
+
+.footer .section-footer .section-start .container .row .foot-text i{
+  font-size:20px;
+  color:#fff;
+  margin-left:10px;
+}
+.footer .section-footer .section-start .container .row .tool-socio .social-media{
+	display:flex;
+	justify-content:center;
+	margin-top:20px;
+}
+.footer .section-footer .section-start .container .row .tool-socio .social-media .icon{
+    margin:0 20px;
+	display:flex;
+	justify_content:center;
+	align-items:center;
+	flex-direction:column;
+	position:relative;
+}
+
+.footer .section-footer .section-start .container .row .tool-socio .social-media .icon span{
+	height:40px;
+	width:40px;
+	display:block;
+	background:#fff;
+	box-shadow:0 10px 10px rgba(0,0,0,0.1);
+	border-radius:50%;
+	text-align:center;
+	cursor:pointer;
+	position:relative;
+}
+
+.footer .section-footer .section-start .container .row .tool-socio .social-media .icon span i{
+	font-size:25px;
+	line-height:40px;
+}
+
+.footer .section-footer .section-start .container .row .tool-socio .social-media .icon .tooltip-text{
+    background:#fff;
+	color:#fff;
+	font-size:20px;
+	padding:8px 18px;
+	border-radius:20px;
+	box-shadow:0 10px 10px rgba(0,0,0,0.1);
+	position:absolute;
+	top:0px;
+	opacity:0;
+	pointer-events:none;
+	transition:all 0.4s cubic-bezier(0.68,-0.55,0.265,1.5);
+}
 
 
 
+.footer .section-footer .section-start .container .row .tool-socio .social-media .icon .tooltip-text::before{
+	position:absolute;
+	content:"";
+	height:15px;
+	width:15px;
+	background:#fff;
+	bottom:-7px;
+	left:50%;
+	transform:translateX(-50%) rotate(45deg);
+	transition:all 0.4s cubic-bezier(0.68,-0.55,0.265,1.5);
+
+}
+
+.footer .section-footer .section-start .container .row .tool-socio .social-media .linkedin span i{
+    color:#3B5999;
+}
+.footer .section-footer .section-start .container .row .tool-socio .social-media .twitter span i{
+	color:#46C1F6;
+}
+.footer .section-footer .section-start .container .row .tool-socio .social-media .instagram span i{
+    color:#e1306c;
+}
 
 
+.footer .section-footer .section-start .container .row .tool-socio .social-media .icon:hover .tooltip-text{
+	opacity:1;
+	top:-70px;
+}
 
+.footer .section-footer .section-start .container .row .tool-socio .social-media .icon:hover span,
+.footer .section-footer .section-start .container .row .tool-socio .social-media .icon:hover .tooltip-text{
+	text-shadow:0px -1px 0px rgba(0,0,0,0.4)
+}
+.footer .section-footer .section-start .container .row .tool-socio .social-media .linkedin:hover span,
+.footer .section-footer .section-start .container .row .tool-socio .social-media .linkedin:hover .tooltip-text,
+.footer .section-footer .section-start .container .row .tool-socio .social-media .linkedin:hover .tooltip-text::before{
+   background:#3B5999;
+}
 
+.footer .section-footer .section-start .container .row .tool-socio .social-media .twitter:hover span,
+.footer .section-footer .section-start .container .row .tool-socio .social-media .twitter:hover .tooltip-text,
+.footer .section-footer .section-start .container .row .tool-socio .social-media .twitter:hover .tooltip-text::before{
+   background:#46C1F6;
+}
 
+.footer .section-footer .section-start .container .row .tool-socio .social-media .instagram:hover span,
+.footer .section-footer .section-start .container .row .tool-socio .social-media .instagram:hover .tooltip-text,
+.footer .section-footer .section-start .container .row .tool-socio .social-media .instagram:hover .tooltip-text::before{
+   background:#e1306c;
+}
+.footer .section-footer .section-start .container .row .tool-socio .social-media .linkedin:hover span i,
+.footer .section-footer .section-start .container .row .tool-socio .social-media .twitter:hover span i,
+.footer .section-footer .section-start .container .row .tool-socio .social-media .instagram:hover span i{
+	color:#fff;
+}
 
 
 
@@ -1010,7 +1283,7 @@ transition:all 0.6s ease;
 }
 .third-page .hobbies .max-width .hobby-content{
 
-	margin-left:70px;
+	margin-left:0px;
 
 }
        .fourth-page .skills .max-width .skills-content {
@@ -1056,7 +1329,7 @@ transition:all 0.6s ease;
 
     .section-third{
 
-     padding-left:100px;
+     padding-left:0px;
 
 	  font-family:'ubuntu', sans-serif;
     }
@@ -1113,6 +1386,10 @@ transition:all 0.6s ease;
 		margin-right:250px;
 		
 
+}
+.eighth-page .contact .section-start .contact-me{
+	padding-left:150px;
+	
 }
  
 }
@@ -1299,19 +1576,11 @@ justify-content:center;
 
 	
 }
-.seventh-page .seventh-section  .section-start .port-container .port-imgs .row-imgs .rows-cols{
-	
+.eighth-page .contact .section-start .contact-me{
+	padding-left:0px;
+	padding-right:0px;
 }
-
-.seventh-page .seventh-section  .section-start .port-container .port-imgs .row-imgs .image{
-	
 }
-
-
-
-}
-
-
 
 
 /*------------------------------------
